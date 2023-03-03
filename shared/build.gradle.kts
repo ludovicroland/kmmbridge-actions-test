@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("co.touchlab.faktory.kmmbridge") version "0.3.5"
 }
 
 kotlin {
@@ -18,7 +19,8 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "TEST_KMM_IOS"
+            isStatic = true
         }
     }
 
@@ -64,4 +66,11 @@ android {
         minSdk = 24
         targetSdk = 33
     }
+}
+
+kmmbridge {
+    spm()
+    versionPrefix.set("0.3")
+    githubReleaseVersions()
+    //etc
 }
