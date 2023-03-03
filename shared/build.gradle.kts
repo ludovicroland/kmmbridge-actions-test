@@ -72,7 +72,7 @@ android {
 addGithubPackagesRepository()
 
 kmmbridge {
-    //mavenPublishArtifacts()
+    mavenPublishArtifacts()
     spm()
     versionPrefix.set("O.1")
     githubReleaseVersions()
