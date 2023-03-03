@@ -69,10 +69,11 @@ android {
     }
 }
 
+addGithubPackagesRepository()
+
 kmmbridge {
     mavenPublishArtifacts()
     spm()
-    versionPrefix.set("0.3")
     githubReleaseVersions()
     //etc
 }
