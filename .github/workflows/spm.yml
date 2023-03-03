@@ -5,5 +5,5 @@ on:
     branches:
       - "main"
 jobs:
-  call-kmmbridge-publish:
+  kmmbridgepublish:
     uses: touchlab/KMMBridgeGithubWorkflow/.github/workflows/faktorybuildbranches.yml@v0.3
