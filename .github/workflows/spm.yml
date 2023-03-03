@@ -1,5 +1,8 @@
 name: KMM Bridge Github Workflow
 on:
+  push:
+    tags:
+      - '*'
   workflow_call:
     inputs:
       module: 
